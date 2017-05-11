@@ -37,6 +37,7 @@ $(document).ready(function() {
 		return ins;
 	};
 	console.log('sum ');
+	console.log( +sum(1)(2)(3)(4));
 	console.log( +sum(1)(2)(3)(4)+5 );
 	console.log('_______');	
 });
