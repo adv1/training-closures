@@ -1,11 +1,8 @@
 $(document).ready(function() {
 	// Simple example
+	var i = 5;
 	function exampleFunc() {
-		var i = 5;
-		function exampleFuncInside() {
-			return i++;
-		};
-		return exampleFuncInside()
+		return i += 1;
 	};
 	console.log('Simple example');
 	console.log(exampleFunc());
