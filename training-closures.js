@@ -4,9 +4,9 @@ $(document).ready(function() {
 	function exampleFunc() {
 		return i += 1;
 	};
-	//console.log('Simple example');
-	//console.log(exampleFunc());
-	//console.log('_______');
+	console.log('Simple example');
+	console.log(exampleFunc());
+	console.log('_______');
 
 	// counter ();
 	function makeCounter() {
@@ -17,11 +17,11 @@ $(document).ready(function() {
 	};
 
 	var counter = makeCounter();
-	//console.log('counter ');
-	//console.log(counter());
-	//console.log(counter()); 
-	//console.log(counter());
-	//console.log('_______');	
+	console.log('counter ');
+	console.log(counter());
+	console.log(counter()); 
+	console.log(counter());
+	console.log('_______');
 
 	// sum()
 	//example 1
@@ -32,42 +32,27 @@ $(document).ready(function() {
 				return number + number2;
 			};
 	};
-	//console.log('sumTwoNumbers(a)(b) ');
-	//console.log( sumTwoNumbers(2)(3));
-	//console.log( sumTwoNumbers()());
-	//console.log('_______');	
-
-	//example 2
-	function sumNumbersNotLimited(numberOne)  {
-		//(arguments.length === 0) ? numberOne = 0 : numberOne;
-		var currentNumber = numberOne;
-		
-		function sum(numberTwo) {
-			//(arguments.length === 0) ? numberTwo = 0 : numberTwo;
-			console.log('currentNumber = ' + currentNumber);	
-			 currentNumber += numberTwo;
-				return sum
-			};
-			return sum
-	};
-	console.log('sumNumbersNotLimited(a)(b)(c)(d)...(n) ');
-	//console.log( sumNumbersNotLimited()(23));
-	console.log( sumNumbersNotLimited(2)(22));
+	console.log('sumTwoNumbers(a)(b) ');
+	console.log( sumTwoNumbers(2)(3));
+	console.log( sumTwoNumbers()());
 	console.log('_______');	
 
-	//example 3
-	function sum(a) {
-		var currentSum = a;
-		function ins(b) {
-			currentSum +=b;
-			return ins;
+	//example 2
+	function sumNumbersNotLimited(a)  {
+		var result = a;
+		return function sum(a) {
+			if (typeof a === 'undefined') {
+				return result;
+			} else {
+				result += a;
+				return sum
+			};
 		};
-		ins.toString = currentSum;   
-		return ins;
 	};
-	//console.log('sum ');
-	//console.log( sum(1)(2));
-	//console.log( sum(1)(2)(3)(4));
-	//console.log( sum(1)(2)(3)(4)+5 );
-	//console.log('_______');	
+	console.log('sumNumbersNotLimited(a)(b)(c)(d)...(n)() ');
+	console.log('and');
+	console.log('sumNumbersNotLimited(a)(b)(c)(d)...(n)() + 5 ');
+	console.log( sumNumbersNotLimited(2)(-5)(10)(11)());
+	console.log( sumNumbersNotLimited(1)(23)() + 5);
+	console.log('_______');	
 });
