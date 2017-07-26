@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	// Simple example
 	var i = 5;
 	function exampleFunc() {
 		return i += 1;
@@ -8,7 +7,7 @@ $(document).ready(function() {
 	console.log(exampleFunc());
 	console.log('_______');
 
-	// counter ();
+
 	function makeCounter() {
 		var currentCount = 1;
 			return function() {
@@ -23,8 +22,7 @@ $(document).ready(function() {
 	console.log(counter());
 	console.log('_______');
 
-	// sum()
-	//example 1
+
 	function sumTwoNumbers(number)  {
 		(arguments.length === 0) ? number = 0 : number;
 		return function(number2) {
@@ -37,7 +35,7 @@ $(document).ready(function() {
 	console.log( sumTwoNumbers()());
 	console.log('_______');	
 
-	//example 2
+
 	function sumNumbersNotLimited(a)  {
 		var result = a;
 		return function sum(a) {
